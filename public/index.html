@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+       crossorigin="anonymous">
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/5.9.0/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/5.9.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/5.9.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/5.9.0/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/5.9.0/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+
+  </head>
+  <body>
+        <!-- registrarse-->
+        <section class= "container">
+          <input type="email" id="email" class=" email" placeholder="email"></<input>
+          <input type = "password" id="password" class= "password" placeholder="contraseña"></<input>
+          <div class="error" id="error-m"></div>
+          <button id="btnLogin" class="btnLogin">login</<button>
+          <button id="btnSignUp" class="btnSignUp">Registrarse</<button>
+          <button id="btnLogout" class="btnLogout">Logout</<button>
+            <button>
+             <a class="rojo-googlemas" id="btnGmail" href="#"><i class="fab fa-google"></i></a>
+           </button>
+        </<section>
+      <script src="src/js/auth.js" type="module"></script>
+      <script src="src/js/form.js" type="module"></script>
+
+      </body>
+    </html>
