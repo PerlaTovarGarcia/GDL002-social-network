@@ -7,7 +7,7 @@
     },
     "extends": "eslint:recommended",
     "globals": {
-      "data": false
+      "firebase": false
     },
     "rules": {
       "no-console": 0,

@@ -1,20 +1,23 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <title></title>
-    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Poua</title>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
   </head>
   <body>
-    <h1></h1
-    <!-- registrarse-->
-    <section class= "container">
-      <input type="email" id="email" class=" email" placeholder="email"></<input>
-      <input type = "password" id="password" class= "password" placeholder="password"></<input>
-      <button id="btnLogin" class="btnLogin">login</<button>
-      <button id="btnSignUp" class="btnSignUp">Registrarse</<button>
-      <button id="btnLogout" class="btnLogout">Logout</<button>
-    </<section>
+    
+    <!--login-->
+  <form class= "container active" id="log-in" data-tab-for="login">
+    <input type="email" id="email" class="input" placeholder="Correo"></<input>
+    <input type = "password" id="password" class= "input" placeholder="contraseña"></<input>
+    <div class="error" id="error-m"></div>
+    <button id="btnLogin" class="btn">Iniciar</<button>
+    <button id="createAccount" class="btnCreate">Crear Cuenta</<button>
+  </form>
+
+   
   <script src="./js/auth.js"></script>
   <script src="./js/form.js"></script>
 
