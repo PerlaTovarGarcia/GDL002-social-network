@@ -4,18 +4,50 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Poua</title>
+    <link rel="stylesheet" href="src/css/style.css"/>
     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
   </head>
   <body>
     
-    <!--login-->
+  <!--login
   <form class= "container active" id="log-in" data-tab-for="login">
     <input type="email" id="email" class="input" placeholder="Correo"></<input>
     <input type = "password" id="password" class= "input" placeholder="contraseña"></<input>
     <div class="error" id="error-m"></div>
     <button id="btnLogin" class="btn">Iniciar</<button>
     <button id="createAccount" class="btnCreate">Crear Cuenta</<button>
-  </form>
+  </form>-->
+
+  <!--index-->
+  <section id="index">
+  <!--post-->
+    <article class="post">
+      <textarea name="Crea una publicación" id="createPost" class="createPost" cols="80" rows="15" placeholder="Cuenta la historia de un lugar que conoces"></textarea>
+      <article>
+        <img src="" alt="Subir foto">
+        <img src="" alt="Localización">
+        <select name="Seleccionar época" id="era">
+          <option value="" selected>Seleccionar época</option>
+          <option value="">México moderno</option>
+          <option value="">México post-revolucionario</option>
+          <option value="">Revolución mexicana</option>
+          <option value="">Porfiriato</option>
+          <option value="">Reforma</option>
+          <option value="">México independiente</option>
+          <option value="">Independencia</option>
+          <option value="">Virreinato o Colonia</option>
+          <option value="">La Conquista</option>
+          <option value="">México prehispánico</option>
+        </select>
+        <select name="Seleccionar privacidad" id="privacy">
+          <option value="">Público</option>
+          <option value="">Privado</option>
+        </select>
+        <button>PUBLICAR</button>
+      </article>
+    </article>
+  </section>
+
 
    
   <script src="./js/auth.js"></script>
