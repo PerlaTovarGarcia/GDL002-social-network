@@ -9,39 +9,72 @@ header {
         background-color: #ED007D;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
-nav {
-        float: left;
+header nav {
+        width: 90%;
+        max-width: 1000px;
+        margin: 20px auto;
+        background-color: #ED007D;
 }
-nav ul {
-        list-style: none;
+header nav ul {
         overflow: hidden;
+        list-style: none;
 }
-nav ul li {
+header nav ul li {
+        float: left;       
+}
+header nav ul li a{
         font-family: 'Roboto', sans-serif;
-        font-size: 1.2rem;
+        font-size: 1rem;
         color: #ffffff;
         display: inline-block;
-        line-height: 5rem;
         padding-left: .5rem;
         padding-right: .5rem;
-}
-nav ul li a {
-        display: block;
         text-decoration: none;
 }
-a {
-        color: #ffffff;
-        text-decoration: none;
+header nav ul li a:hover {
+        background: #CA076E;
 }
-a:hover {
-        color: #CA076E;
+.mobile-barMenu {
+        display: none;
 }
-.highlight {
-        color: #0c17f5;
-        font-style: bold;
+@media screen and (max-width:800px) {
+        header nav {
+                width: 75%;
+                height: 100%;
+                margin: 0;
+                position: fixed;
+        }
+        header nav ul li {
+                display: block;
+                float: none;
+                border-bottom: 1px solid rgbs(255,255,255, .3);
+                text-align: left;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+        }
+        .mobile-barMenu {
+                display: block;
+                width: 100%;
+                background: #ED007D
+        }
+        .mobile-barMenu .btn-menu {
+                display: block;
+                padding: 20px;
+                background: #ED007D;
+                color: #ffffff;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+        }
+        .mobile-barMenu i {
+                float: right;
+                font-size: 40px;
+        }
+
 }
+
 .index {
-        padding-top: 7rem;
+        padding-top: 9rem;
 }
 .post {
         justify-content: center;
