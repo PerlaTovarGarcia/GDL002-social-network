@@ -4,11 +4,26 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Poua</title>
-    <link rel="stylesheet" href="src/css/style.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
   </head>
   <body>
-    
+  <header>
+      <nav>
+        <ul>
+          <li><a class="logoNav" href="#"><img src="img/logo-poua-app.png" width="180"></a></li>
+          <li><a href="#">INICIO</a></li>
+          <li><a href="#">ENCONTRAR AMIGOS</a></li>
+          <li><a href="#">LUGARES POR ESTADO</a></li>
+          <li><a href="#">LUGARES POR ÉPOCA</a></li>
+          <li><a href="#"><i class="fas fa-user fa-2x" style="color: #ffffff;"></i></a></li>
+          <li><a href="#"><i class="fas fa-calendar-plus fa-2x" style="color: #ffffff;"></i></a></li>
+          <li><a href="#"><i class="fas fa-bookmark fa-2x" style="color: #ffffff;"></i></a></li>
+        </ul>
+      </nav>
+  </header>  
   <!--login
   <form class= "container active" id="log-in" data-tab-for="login">
     <input type="email" id="email" class="input" placeholder="Correo"></<input>
@@ -19,14 +34,15 @@
   </form>-->
 
   <!--index-->
-  <section id="index">
+  <section id="index" class="index">
   <!--post-->
     <article class="post">
+      <img src="img/boy.png" alt="user" width="45" height="45" class="user">
       <textarea name="Crea una publicación" id="createPost" class="createPost" cols="80" rows="15" placeholder="Cuenta la historia de un lugar que conoces"></textarea>
       <article>
-        <img src="" alt="Subir foto">
-        <img src="" alt="Localización">
-        <select name="Seleccionar época" id="era">
+        <img src="img/image.png" alt="Subir foto" width="35" height="35">
+        <img src="img/location.png" alt="Localización" width="35" height="35">
+        <select name="Seleccionar época" id="era" class="era">
           <option value="" selected>Seleccionar época</option>
           <option value="">México moderno</option>
           <option value="">México post-revolucionario</option>
@@ -39,17 +55,21 @@
           <option value="">La Conquista</option>
           <option value="">México prehispánico</option>
         </select>
-        <select name="Seleccionar privacidad" id="privacy">
+        <select name="Seleccionar privacidad" id="privacy" class="privacy">
           <option value="">Público</option>
           <option value="">Privado</option>
         </select>
-        <button>PUBLICAR</button>
+        <button class="makePost">PUBLICAR</button>
       </article>
     </article>
   </section>
-
-
-   
+  <footer>
+      <i class="fas fa-home fa-2x" style="color: #ffffff;"></i>
+      <i class="fas fa-user fa-2x" style="color: #ffffff;"></i>
+      <i class="fas fa-calendar-plus fa-2x" style="color: #ffffff;"></i>
+      <i class="fas fa-bookmark fa-2x" style="color: #ffffff;"></i>
+  </footer>
+ 
   <script src="./js/auth.js"></script>
   <script src="./js/form.js"></script>
 

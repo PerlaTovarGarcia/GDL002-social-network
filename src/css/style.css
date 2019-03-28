@@ -1,16 +1,98 @@
+*{
+        margin: 0;
+        text-align: center;
+}
+header {
+        width: 100%;
+        position: fixed;
+        z-index: 100;
+        background-color: #ED007D;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+nav {
+        float: left;
+}
+nav ul {
+        list-style: none;
+        overflow: hidden;
+}
+nav ul li {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.2rem;
+        color: #ffffff;
+        display: inline-block;
+        line-height: 5rem;
+        padding-left: .5rem;
+        padding-right: .5rem;
+}
+nav ul li a {
+        display: block;
+        text-decoration: none;
+}
+a {
+        color: #ffffff;
+        text-decoration: none;
+}
+a:hover {
+        color: #CA076E;
+}
+.highlight {
+        color: #0c17f5;
+        font-style: bold;
+}
+.index {
+        padding-top: 7rem;
+}
 .post {
-        background-color: yellow;
         justify-content: center;
         margin: auto;
         box-sizing: content-box;
 }
 .createPost {
-        border-radius: 15px;
-        /*outline: none;
-        width: 90%;*/
+        border-radius: 0.3125rem;
+        outline: none;
+        width: 95%;
+        height: 5%;
         background-color: transparent;
-        
-        width:300px;
-        height:80px;
-        border: 1px dotted #000099;
+        text-align: left;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.2rem;
+}
+.era {
+        width: 9.8rem;
+}
+.privacy {
+        width: 6.875rem;
+}
+.era, .privacy {
+        border-radius: 0.3125rem;
+        border: 0.125rem solid #FF9C08;
+        background-color: transparent;
+        font-size: 0.9rem;
+        height: 2.5rem;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1rem;
+}
+.makePost{
+        background-color: #F1C711;
+        border-radius: 0.3125rem;
+        border: 0;
+        width: 6.875rem;
+        height: 2.5rem;
+        font-family: 'Roboto', sans-serif;
+}
+.makePost:hover {
+        background-color: #FF9C08;
+}
+footer {
+        width: 100%;
+        height: 3.75rem;
+        background-color: #22A438;
+        position: fixed;
+        bottom: 0;
+}
+i {
+        margin-left: 1.3rem;
+        margin-right: 1.3rem;
+        padding-top: 1rem;
 }
