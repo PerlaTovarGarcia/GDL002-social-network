@@ -1,6 +1,7 @@
 *{
         margin: 0;
         text-align: center;
+        box-sizing: border-box;
 }
 header {
         width: 100%;
@@ -30,11 +31,12 @@ header nav ul li a{
         padding-left: .5rem;
         padding-right: .5rem;
         text-decoration: none;
+        text-align: left;
 }
 header nav ul li a:hover {
         background: #CA076E;
 }
-.mobile-barMenu {
+/*.mobile-barMenu {
         display: none;
 }
 @media screen and (max-width:800px) {
@@ -65,13 +67,14 @@ header nav ul li a:hover {
                 -webkit-box-sizing: border-box;
                 -moz-box-sizing: border-box;
                 box-sizing: border-box;
+                border: 0;
         }
         .mobile-barMenu i {
                 float: right;
                 font-size: 40px;
         }
 
-}
+}*/
 
 .index {
         padding-top: 9rem;
