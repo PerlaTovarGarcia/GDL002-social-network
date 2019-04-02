@@ -36,17 +36,19 @@ header nav ul li a{
 header nav ul li a:hover {
         background: #CA076E;
 }
+
+/*Estilos para menu en mobile*/
 /*.mobile-barMenu {
         display: none;
 }
 @media screen and (max-width:800px) {
-        header nav {
+        header .nav {
                 width: 75%;
                 height: 100%;
                 margin: 0;
                 position: fixed;
         }
-        header nav ul li {
+        header .nav ul li {
                 display: block;
                 float: none;
                 border-bottom: 1px solid rgbs(255,255,255, .3);
@@ -59,7 +61,7 @@ header nav ul li a:hover {
                 width: 100%;
                 background: #ED007D
         }
-        .mobile-barMenu .btn-menu {
+        .mobile-barMenu {
                 display: block;
                 padding: 20px;
                 background: #ED007D;
@@ -67,17 +69,25 @@ header nav ul li a:hover {
                 -webkit-box-sizing: border-box;
                 -moz-box-sizing: border-box;
                 box-sizing: border-box;
-                border: 0;
         }
         .mobile-barMenu i {
                 float: right;
                 font-size: 40px;
         }
-
+        i {
+                margin: 0;
+                padding: 0;
+        }
 }*/
 
+/* Estilos para pantalla index*/
 .index {
         padding-top: 9rem;
+        width: 80%;
+        margin: auto;
+        background-color: #ffffff;
+        box-sizing: content-box;
+        background-attachment: scroll;
 }
 .post {
         justify-content: center;
@@ -87,8 +97,7 @@ header nav ul li a:hover {
 .createPost {
         border-radius: 0.3125rem;
         outline: none;
-        width: 95%;
-        height: 5%;
+        width: 90%;
         background-color: transparent;
         text-align: left;
         font-family: 'Roboto', sans-serif;
@@ -109,7 +118,7 @@ header nav ul li a:hover {
         font-family: 'Roboto', sans-serif;
         font-size: 1rem;
 }
-.makePost{
+.makePost-btn{
         background-color: #F1C711;
         border-radius: 0.3125rem;
         border: 0;
@@ -117,9 +126,49 @@ header nav ul li a:hover {
         height: 2.5rem;
         font-family: 'Roboto', sans-serif;
 }
-.makePost:hover {
+.makePost-btn:hover {
         background-color: #FF9C08;
 }
+
+/*Estilo para footer mobile*/
+.mobile-foot {
+        display: none;
+}
+.foot-parr {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.2rem;
+        color: #ffffff;
+        text-align: center;
+        padding: 1rem;
+}
+@media screen and (max-width:800px) {
+        .nav {
+                display: none;
+        }
+        .mobile-foot {
+                display: block;
+                width: 100%;
+                height: 3.75rem;
+                background-color: #22A438;
+                position: fixed;
+                bottom: 0;
+        }
+        i {
+                margin-left: 1.3rem;
+                margin-right: 1.3rem;
+                padding-top: 1rem;
+        }
+        .menu-icon {
+                color: #F1C711;
+                padding-bottom: 1rem;
+        }
+        .menu-btn {
+                background-color: #ED007D;
+                border: 0;
+        }
+}
+
+/*Estilo para footer desktop*/
 footer {
         width: 100%;
         height: 3.75rem;
