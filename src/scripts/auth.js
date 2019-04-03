@@ -12,36 +12,95 @@ firebase.initializeApp(config);
 //Registrar usuario
 const register = () => {
     let emailRegister = document.getElementById('emailRegister').value;
-    let passworRegister = document.getElementById('passwordRegister').value;
+    let passwordRegister = document.getElementById('passwordRegister').value;
 
-    firebase.auth().createUserWithEmailAndPassword(emailRegister, passworRegister).catch(function(error) {
+    firebase.auth().createUserWithEmailAndPassword(emailRegister, passwordRegister).catch(function(error) {
         // Manejar errores
         let errorCode = error.code;
         let errorMessage = error.message;
-        alert(errorCode);
-        alert(errorMessage);   
+        console.log(errorCode + errorMessage);
+        alert('El usuario o contraseña no son válidos');   
       });
 };
 
 document.getElementById('btnRegister').addEventListener('click',register);
 
-/*
-//iniciar con google
-const provider = new firebase.auth.GoogleAuthProvider();
+//Inicio de sesión
+const login = () => {
+  const emailLogin = document.getElementById('email').value;
+  const passwordLogin = document.getElementById('password').value;
+  
+  firebase.auth().signInWithEmailAndPassword(emailLogin, passwordLogin).catch(function(error) {
+    // Manejar errores
+    let errorCode = error.code;
+    let errorMessage = error.message;
+    console.log(errorCode + errorMessage);
+    alert('Correo o contraseña incorrectos');
+  });
+};
 
-firebase.auth().signInWithPopup(provider).then(function(result) {
-    // This gives you a Google Access Token. You can use it to access the Google API.
+document.getElementById('btnLogin').addEventListener('click', login);
+
+//iniciar con google
+const googleInit = () => {
+  const provider = new firebase.auth.GoogleAuthProvider();
+
+  firebase.auth().signInWithPopup(provider).then(function(result) {
+    // Token de google para iniciar API
     const token = result.credential.accessToken;
-    // The signed-in user info.
+    // Info de usuario
     let user = result.user;
     // ...
   }).catch(function(error) {
-    // Handle Errors here.
+    // Manejar errores
     let errorCode = error.code;
     let errorMessage = error.message;
-    // The email of the user's account used.
+    // Email de la cuenta del usuario
     let email = error.email;
-    // The firebase.auth.AuthCredential type that was used.
+    // Tipo de credencial de firebase.auth.AuthCredential
     let credential = error.credential;
-    // ...
-  });*/
+  });
+};
+
+document.getElementById('btnGoogleReg').addEventListener('click', googleInit);
+document.getElementById('btnGoogleLog').addEventListener('click', googleInit);
+
+//Observador
+const watcher = () => {
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      console.log('Existe usuario activo');
+      showcontent();
+      
+      // Usuario está logueado
+      var displayName = user.displayName;
+      var email = user.email;
+      var emailVerified = user.emailVerified;
+      var photoURL = user.photoURL;
+      var isAnonymous = user.isAnonymous;
+      var uid = user.uid;
+      var providerData = user.providerData;
+      // ...
+    } else {
+      console.log('Usuario inactivo');
+      // Usuario cierra sesión
+    }
+  });
+};
+watcher();
+
+const showcontent = () => {
+  let content = document.getElementById('logout');
+  content.innerHTML = `<button onclick="userLogout()">Cerrar</button>`;
+};
+
+//Cerrar sesión
+const userLogout = () => {
+  firebase.auth().signOut()
+  .then(function(){
+      console.log('saliendo...');
+  })
+  .catch(function(error){
+      console.log(error);
+  })
+};

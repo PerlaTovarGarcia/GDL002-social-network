@@ -64,26 +64,30 @@
           <li><a href="#"><i class="fas fa-bookmark fa-2x" style="color: #ffffff;"></i></a></li>
         </ul>
       </nav>
-    </header>-->  
-    <!--login--><!--
-    <form class= "active" id="login" data-tab-for="login" data-tab-for="login">
-      <input type="email" id="email" class="input" placeholder="Correo"></<input>
-      <input type = "password" id="password" class= "input" placeholder="Contraseña"></<input>
-      <div class="error" id="error-m"></div>
-      <button id="btnLogin" class="btnLogin">Iniciar</<button>
-      <button id="createAccount" class="btnCreate">Crear Cuenta</<button>
-    </form>-->
-
-    <form class="hide" id="register" data-tab-for="register">
-      <input type="email" id="emailRegister" class="input" placeholder="Ingresa correo"></<input>
-      <input type = "password" id="passwordRegister" class= "input" placeholder="Ingresa contraseña"></<input>
-      <div class="error" id="error-m"></div>
-      <button id="btnRegister" class="btn">Registrarse</<button>
+    </header>--> 
+    
+    <!--Registro de usuario-->
+    <form class="hide" id="register" data-tab-for="register" onsubmit="return false">
+      <h4>Registro de usuarios</h4>
+      <button id="btnGoogleReg"><i class="fab fa-google"></i>Registrarse con Google</button>
+      <input type="email" id="emailRegister" class="input" placeholder="Ingresa correo"></input>
+      <input type = "password" id="passwordRegister" class= "input" placeholder="Ingresa contraseña"></input>
+      <button id="btnRegister" class="btn">Registrarse</button>
     </form>
 
-    <!--index
+    <!--Inicio de usuarios-->
+    <form class= "active" id="login" data-tab-for="login" data-tab-for="login" onsubmit="return false">
+      <h4>Inicio de sesión</h4>
+      <button id="btnGoogleLog"><i class="fab fa-google"></i>Iniciar sesión con Google</button>
+      <input type="email" id="email" class="input" placeholder="Correo"></input>
+      <input type = "password" id="password" class= "input" placeholder="Contraseña"></input>
+      <button id="btnLogin" class="btnLogin">Iniciar</button>
+      <button id="createAccount" class="btnCreate">Crear Cuenta</button>
+    </form>
+
+    <div id="logout"></div>
+    <!--index-->
     <section id="index" class="index">
-    post
       <article class="post">
         <img src="img/boy.png" alt="user" width="45" height="45" class="user">
         <textarea name="Crea una publicación" id="createPost" class="createPost" cols="50" rows="15" placeholder="Cuenta la historia de un lugar que conoces"></textarea>
@@ -112,6 +116,7 @@
       </article>
     </section>
 
+    <!--Footers--><!--
     <footer class="desktop-foot">
       <p class="foot-parr">Powered By Perla, Jess & Itinna. 2019</p>
     </footer>
