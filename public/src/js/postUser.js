@@ -39,10 +39,13 @@ export const newpost = () => {
               <h6></h6>
             </article>
 
-            <article class="postContainer">
+            <article id= "${doc.id}" class="postContainer">
               <h4></h4>
+              <button class="editar" onclick="edit()"><i class="fas fa-pen" style="color #F1C711"></i></button>
+              <button class="eliminar" ><i class="fas fa-trash-alt" style="color #F1C711"></i></button>
               <p class="postextStyle">${doc.data().comment}</p>
               <img src=''></img>
+              <button><i class="fas fa-heart" style="color #F1C711"></i></button>
             </article>
 
             <article>
@@ -53,11 +56,22 @@ export const newpost = () => {
             </article>
           `;
 
-       db.collection("users").orderBy('date', 'desc');
+          db.collection("users").orderBy('date', 'desc');
 
-            console.log(`${doc.id} => ${doc.data().comment}`);
         });
     });
   }
-
 };
+
+//Eliminar postextStyle
+
+const dlete = (id)=>{
+
+db.collection("users").doc(id).delete().then(function() {
+    console.log("Document successfully deleted!");
+
+}).catch(function(error) {
+    console.error("Error removing document: ", error);
+});
+}
+document.querySelector('.eliminar').addEventListener('click', dlete,false);
