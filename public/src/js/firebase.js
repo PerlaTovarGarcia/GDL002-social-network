@@ -1,6 +1,6 @@
 import { initRouter } from './changePage.js';
 
-  const inicializa = () => {
+  //const inicializa = () => {
 
     /*const config = {
         apiKey: "AIzaSyDLsQLjAYWtZaPcvhuC1MBnWeYf7k3WMcU",
@@ -10,9 +10,9 @@ import { initRouter } from './changePage.js';
         storageBucket: "redsociallaboratortia.appspot.com",
         messagingSenderId: "97649702787"
       };
-      firebase.initializeApp(config);*/
-
+      //firebase.initializeApp(config);
+*/
     initRouter();
-  };
+//  };
 
-  window.addEventListener('load', inicializa);
+//  window.addEventListener('load', inicializa);

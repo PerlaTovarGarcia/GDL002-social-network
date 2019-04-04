@@ -4,20 +4,24 @@ export let loginUser = () => {
    const formElem = document.createElement('form');
      let formSignIn= `
                       <section>
-                        <img alt="" src="src/imagenes/inicio-mobile.png" width="100%"/>
-                        <img alt="" src="src/imagenes/poua-text-mobile.png" width="100%"/>
+                        <img alt="logo Poua" src="src/imagenes/inicio-banner.png" class="desktop-index" width="100%"/>
+                        <img alt="logo Poua" src="src/imagenes/inicio-mobile.png" class="mobile-index" width="100%"/>
+                        <img alt="Texto Poua" src="src/imagenes/poua-text-mobile.png" class="mobile-index" width="100%"/>
                         <section class="inputs-buttons-img">
                         <form class= "container active" id="log-in" data-tab-for="login">
-                              <input type="email" id="emaiLogin" class="input" placeholder="email"></<input>
-                              <input type = "password" id="passwordLogin" class= "input" placeholder="contraseña"></<input>
+                              <button class="googleBtn">
+                                  <a class="google" id="btnGmail" href="#"><i class="fab fa-google"></i> Iniciar sesión con Google</a>
+                              </button>
+                              <div>
+                                <input type="email" id="emaiLogin" class="input" placeholder="Correo"></input>
+                              </div>
+                                <input type = "password" id="passwordLogin" class= "input" placeholder="Contraseña"></input>
                               <div id="message"><p></p></div>
-                              <button id="btnLogin" class="btn">Entrar</<button>
-                              <button>
-                                  <a class="google" id="btnGmail" href="#"><i class="fab fa-google"></i> Ingresar con cuenta de Google</a>
-                                </button>
+                              <button id="btnLogin" class="btn">INICIAR</button>
+
                           </form>
                         <div class="register">
-                            <p>¿No tienes cuenta? <a id="createAccount" href="#/register">Crear Cuenta</a></p>
+                            <a id="createAccount" class="createAccount" href="#/register">CREAR CUENTA</a>
                         </div>
                         </section>
                     `;

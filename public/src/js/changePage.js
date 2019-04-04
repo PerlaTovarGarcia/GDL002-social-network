@@ -1,6 +1,7 @@
 import {loginUser} from './templateLogin.js';
 import {registerUser} from './templateRegisterUser.js';
 import {wall} from './templatePerfil.js';
+import{ newpost} from './postUser.js'
 
 //export const content = document.getElementById('container');
 
@@ -71,6 +72,7 @@ export const changeHash = (nameHash) => {
 
             container.innerHTML = '';
             container.appendChild(wall());
+            newpost();
           break;
         default:
 
