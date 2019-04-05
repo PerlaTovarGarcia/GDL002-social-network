@@ -44,12 +44,12 @@ export const newpost = () => {
 		const dlete = (id)=>{
 
 			db.collection("users").doc(id).delete().then(function() {
-			    console.log("Document successfully deleted!");
+				console.log("Document successfully deleted!");
 
-			}).catch(function(error) {
-			    console.error("Error removing document: ", error);
-			});
-			}
+				}).catch(function(error) {
+					console.error("Error removing document: ", error);
+				});
+			};
 
 
 //Visualizar template de posts
@@ -90,8 +90,8 @@ export const newpost = () => {
           //}
 
           console.log(document.querySelector('.eliminar'));
-          document.querySelector('.eliminar').addEventListener('click', () => {
-          dlete(doc.id)});
+          document.querySelector('.eliminar').addEventListener('click', () => {dlete(doc.id);
+					});
 					//dlete(doc.id));
           });
 
