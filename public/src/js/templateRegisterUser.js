@@ -11,7 +11,7 @@ export let registerUser = () => {
                   <form class= "container hide" id="register" data-tab-for="register">
 
                     <button class="googleBtn">
-                      <a class="google" id="btnGmail" href="#"><i class="fab fa-google"></i>Registrarse con Google</a>
+                      <a class="google" id="btnGmail" href="#"><i class="fab fa-google googleIcon"></i>Registrarse con Google</a>
                     </button>
                     <div>
                       <input class= "input" id="name" type="text" placeholder="Nombre" required></input>

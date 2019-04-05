@@ -12,7 +12,7 @@ import { initRouter } from './changePage.js';
       };
       //firebase.initializeApp(config);
 */
-    initRouter();
+initRouter();
 //  };
 
 //  window.addEventListener('load', inicializa);

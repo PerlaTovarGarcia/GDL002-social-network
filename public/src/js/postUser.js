@@ -8,9 +8,6 @@ export let basePost=()=>{
 	let comment = document.querySelector(".createPost").value;
   let time = new Date();
 
-  //let buttnsDelete=Array.from(document.getElementsByClassName('eliminar'));
-  //buttnsDelete.forEach(button => button.addEventListener('click', dlete));
-
 	db.collection("users").add({ //agrega un ID automatico a cada usuario
     comment: comment,
     date: time
@@ -31,8 +28,8 @@ export let basePost=()=>{
 export const newpost = () => {
 
 //Eliminar post
-	let buttnsDelete = Array.from(document.getElementsByClassName('eliminar'));
-	buttnsDelete.forEach(button => button.addEventListener('click', dlete));
+	/*let buttnsDelete = Array.from(document.getElementsByClassName('eliminar'));
+	buttnsDelete.forEach(button => button.addEventListener('click', basePost.dlete));
 
 	function dlete () {
 		let idParentDleteBtn = this.event.target.parentNode.getAttribute('id');
@@ -43,7 +40,16 @@ export const newpost = () => {
 			}).catch(function(error) {
 				console.error("Error removing document: ", error);
 			});
-		}
+		}*/
+		const dlete = (id)=>{
+
+			db.collection("users").doc(id).delete().then(function() {
+			    console.log("Document successfully deleted!");
+
+			}).catch(function(error) {
+			    console.error("Error removing document: ", error);
+			});
+			}
 
 
 //Visualizar template de posts
@@ -78,15 +84,15 @@ export const newpost = () => {
           `;
 
           db.collection("users").orderBy('date', 'desc');
-          //let orderPost = () => {
+					//document.querySelector('.eliminar').addEventListener('click', dlete,false);
+					//let orderPost = () => {
 
           //}
 
-          /*console.log(document.querySelector('.eliminar'));
+          console.log(document.querySelector('.eliminar'));
           document.querySelector('.eliminar').addEventListener('click', () => {
-            dlete(doc.id)});*/
-
-            //dlete(doc.id));
+          dlete(doc.id)});
+					//dlete(doc.id));
           });
 
         });
