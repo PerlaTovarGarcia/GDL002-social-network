@@ -1,0 +1,17 @@
+{
+  "env": {
+    "browser": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "extends": "eslint:recommended",
+  "globals": {
+    "firebase": false
+  },
+  "rules": {
+    "no-console": 0,
+    "semi": 2
+  }
+}
