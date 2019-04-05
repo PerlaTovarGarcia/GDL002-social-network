@@ -10,7 +10,7 @@ export let loginUser = () => {
                         <section class="inputs-buttons-img">
                         <form class= "container active" id="log-in" data-tab-for="login">
                               <button class="googleBtn">
-                                  <a class="google" id="btnGmail" href="#"><i class="fab fa-google"></i> Iniciar sesión con Google</a>
+                                  <a class="google" id="btnGmail" href="#"><i class="fab fa-google googleIcon"></i> Iniciar sesión con Google</a>
                               </button>
                               <div>
                                 <input type="email" id="emaiLogin" class="input" placeholder="Correo"></input>

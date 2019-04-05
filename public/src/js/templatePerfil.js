@@ -1,11 +1,11 @@
-import{changeHash} from './changePage.js'
-import{basePost, newpost} from './postUser.js'
+import{changeHash} from './changePage.js';
+import{basePost} from './postUser.js';
 
-export let wall = (posts) => {
+export let wall = () => {
   console.log("wal");
     const divElem = document.createElement('div');
     //divElem.classList.add("section");
-     let viewHome = `
+    let viewHome = `
 
     <article class="post">
       <section class="mobile-barMenu">
@@ -20,10 +20,10 @@ export let wall = (posts) => {
          <li><a href="#"><i class="fas fa-search fa-sm"></i>AMIGOS</a></li>
          <li><a href="#"><i class="fas fa-search fa-sm"></i>POR ESTADO</a></li>
          <li><a href="#"><i class="fas fa-search fa-sm"></i>POR ÉPOCA</a></li>
-         <li><a href="#"><i class="fas fa-user fa-lg" style="color: #ffffff;"></i></a></li>
+         <li><a href="#"><i class="fas fa-user fa-lg"></i></a></li>
          <li><a href="#"><i class="fas fa-calendar-plus fa-lg" style="color: #ffffff;"></i></a></li>
          <li><a href="#"><i class="fas fa-bookmark fa-lg" style="color: #ffffff;"></i></a></li>
-         <li><button id="userLogoutBtn">Cerrar Sesión</button>
+         <li><button id="userLogoutBtn" class="logout"><i class="fas fa-sign-out-alt fa-2x"></i></button>
        </ul>
        </nav>
      </header>
@@ -65,109 +65,32 @@ export let wall = (posts) => {
     </footer>
 
     <footer class="mobile-foot">
-        <i class="fas fa-home fa-2x" style="color: #ffffff;"></i>
-        <i class="fas fa-user fa-2x" style="color: #ffffff;"></i>
-        <i class="fas fa-calendar-plus fa-2x" style="color: #ffffff;"></i>
-        <i class="fas fa-bookmark fa-2x" style="color: #ffffff;"></i>
+        <i class="fas fa-home fa-2x"></i>
+        <i class="fas fa-user fa-2x"></i>
+        <i class="fas fa-calendar-plus fa-2x"></i>
+        <i class="fas fa-bookmark fa-2x"></i>
     </footer>
     `;
+
      divElem.setAttribute('id', 'muro');
      divElem.innerHTML = viewHome;
 
-    const userLogout = () =>{
+     const userLogout = () =>{
       firebase.auth().signOut()
 
         .then (()=>changeHash('/login'))
         //console.log('saliendo');
 
-      .catch(function(error){
-        console.log(error);
-      })
-    };
-    divElem.querySelector('#userLogoutBtn').addEventListener('click',userLogout);
+        .catch(function(error){
+          console.log(error);
+        });
+      };
+      divElem.querySelector('#userLogoutBtn').addEventListener('click',userLogout);
 
-    const btnPost = divElem.querySelector('#public');
-    btnPost.addEventListener( 'click', () =>{
-        basePost()
+      const btnPost = divElem.querySelector('#public');
 
-
-
+      btnPost.addEventListener( 'click', () =>{
+          basePost();
       });
-
-//newpost();
-      /*
-      const visualizationPost = document.querySelector('#visualizationPost');
-      const newPost =()=>{
-        firebase.firestore().collection("users").onSnapshot((querySnapshot)
-          .then(()=>{
-            visualizationPost.innerHTML = '';
-
-              querySnapshot.forEach((doc) => {
-                visualizationPost.innerHTML += `
-                  <article>
-                    <img src=''></img>
-                    <h6></h6>
-                  </article>
-
-                  <article>
-                    <h4></h4>
-                    <p>${doc.data.comment()}</p>
-                    <img src=''></img>
-                  </article>
-
-                  <article>
-                    <i></i>
-                    <p></p>
-                    <p></p>
-                    <h6></h6>
-                  </article>
-                `;
-                console.log(`${doc.id} => ${doc.data.comment()}`);
-
-          })
-
-
-
-    }));
-}*/
-
-
-    //Agregar colecciones de datos
-     /*db.collection("users").add({
-        profileImg: "Lovelace",
-        name: 1815,
-        place: 1815,
-        era: 'jol',
-        text: 'jol',
-        image: 'jol',
-    })
-    .then(function(docRef) {
-        console.log("Document written with ID: ", docRef.id);
-        let values=divElem.querySelector('#createPost').value;
-        console.log(values);
-    })
-    .catch(function(error) {
-        console.error("Error adding document: ", error);
-    });
-    divElem.querySelector('#public').addEventListener('click', readPost);*/
-
-
-    return divElem;
-  };
-
-
-
-
-/*Plantilla para visualiZar post
-export let readPost = () => {
-  const divElemRead = document.createElement('div');
-  divElemRead.setAttribute('id', 'visualizationPost');
-
-  /*let viewPost = `
-  <section id="visualizationPost">
-  </section>
-  `;
-
-  return divElemRead;
-
-};*/
+      return divElem;
+};

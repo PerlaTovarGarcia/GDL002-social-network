@@ -1,31 +1,7 @@
 import {loginUser} from './templateLogin.js';
 import {registerUser} from './templateRegisterUser.js';
 import {wall} from './templatePerfil.js';
-import{ newpost} from './postUser.js'
-
-//export const content = document.getElementById('container');
-
-/*export let routers = {
-  '/':loginUser,
-  '/login':loginUser,
-  '/register':registerUser,
-  '/home':viewHome
-}
-window.onpopstate = ()=>{
-  content.innerHTML = routers[window.location.pathname];
-  //content.innerHTML=' ';
-
-}
-export let onNav = (pathName)=>{
-  window.history.pushState({},pathName,window.location.origin + pathName);
-  content.innerHTML = routers[pathName];
-}
-
-
-
-content.innerHTML = routers[window.location.pathname];
-//console.log(routers);
-}*/
+import{ newpost} from './postUser.js';
 
 
 export const changeHash = (nameHash) => {
@@ -33,7 +9,7 @@ export const changeHash = (nameHash) => {
 };
 
 
- export const changeRouter = (hash) => {
+export const changeRouter = (hash) => {
     if (hash === '#/' || hash === '' || hash === '#') {
       return showTemplate(hash); //el que carga por defecto, primera vez
     } else if (hash === '#/login' || hash=== '#/register' || hash === '#/profile') {
@@ -41,12 +17,12 @@ export const changeHash = (nameHash) => {
     } else {
       return showTemplate('#/404');
     }
-  };
+};
 
 
 
 
-  const showTemplate = (routers) => {
+const showTemplate = (routers) => {
 
 
     const router = routers.substr(2, routers.length - 2);
@@ -55,7 +31,7 @@ export const changeHash = (nameHash) => {
     const container = document.getElementById("container");
     container.innerHTML = ' ';
 
-
+    const templateSignIn = loginUser();
 
     switch (router) {
       case 'login':
@@ -68,16 +44,14 @@ export const changeHash = (nameHash) => {
         break;
 
 
-        case 'profile':
-
-            container.innerHTML = '';
-            container.appendChild(wall());
-            newpost();
+      case 'profile':
+        container.innerHTML = '';
+          container.appendChild(wall());
+          newpost();
           break;
-        default:
 
-          const templateSignIn = loginUser();
-          container.appendChild(templateSignIn);
+      default:
+      container.appendChild(templateSignIn);
       }
 };
 

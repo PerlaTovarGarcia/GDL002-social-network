@@ -1,419 +1,175 @@
-# Creando una Red Social
+# Poua
+Poua es una red social creada para contar la historia de México compartiendo con otros usuarios los lugares en los que la Historia ocurrió principalmente, todo esto desde la perspectiva y conocimiento de los lugares en México que mejor conoce cada usuario.
 
-## Preámbulo
+# Definición del producto
+## El objetivo // Problemática que resuelve
+A pesar del gran interés de algunas personas por la historia, algunos consideran que ésta se cuenta de una forma aburrida y poco interesante. De esta manera, Poua es una red social en donde se toma al usuario como participe de la historia porque existe la posibilidad de que el usuario pudiése ser descendiente de un personaje histórico, por ejemplo, que viva en donde se gestó alguna de las grandes batallas, ó de que trabaje en la esquina donde se firmó un tratado importante para construir el México que somos hoy. Así, el objetivo de Poua es convertirse en un espacio y punto de encuentro para aquellas personas que consideran que la Historia es parte de cada uno de los que vivimos México.
 
-Instagram, Snapchat, Twitter, Facebook, Twitch, Linkedin, etc. Las redes
-sociales han invadido nuestras vidas. Las amamos y/u odiamos, y muchos no podemos vivir sin ellas.
 
-Hay redes sociales de todo tipo y para todo tipo de intereses. Por ejemplo,
-en una ronda de financiamiento con inversionistas, se presentó una red social
-para químicos en la que los usuarios podían publicar artículos sobre sus
-investigaciones, comentar en los artículos de sus colegas, y filtrar artículos
-de acuerdo a determinadas etiquetas o su popularidad, lo más reciente, o lo
-más comentado.
+## El usuario
 
-## Introducción
+El usuario principal para el uso de la red social son personas que tienen gusto por la historia, sobre todo de la Historia de México y que les gusta viajar por la República mexicana para conocer la Historia a través de los lugares que visitan, pero que no son especialistas en el tema, en un rango de edad de entre 18 y 55 años.
 
-Una emprendedora nos ha encargado crear una red social. No nos da mucho detalle
-sobre qué tipo de red social quiere, sólo nos dice que creemos la mejor que
-podamos, y que luego la convenzamos de lanzarla al mercado. Nos da ciertos temas
-en los que le gustaría invertir:
+### Objetivos del usuario en relación al producto
 
-* Alimentación
-* Feminismo
-* Educación
-* Salud
-* Energías Renovables
-* o la idea que mejor les parezca
+* Conocer la historia de México por medio de las fotos y comentarios que los usuarios comparten en la red.
 
-## Objetivos de Aprendizaje
+* Encontrar datos poco conocidos ó curiosos de los lugares que visitan otros usuarios.
 
-El objetivo principal de aprendizaje de este proyecto es construir una
-[Single-page Application (SPA)](https://es.wikipedia.org/wiki/Single-page_application)
-[_responsive_](https://github.com/Laboratoria/curricula-js/tree/master/topics/css/02-responsive)
- (con más de una vista / página) en la que podamos **leer y escribir datos.**
+* Visitar distintos lugares históricos en México y compartir sus experiencias.
 
-Dicho en palabras sencillas, aprenderás a:
 
-* Aplicar y profundizar todo lo que aprendiste en el proyecto anterior.
-* Entender las necesidades de los usuarios para los que crearás el producto y
-  que ayudarás a resolver.
-* Poner en juego tu creatividad para generar ideas que lleven a una solución
-  original y valiosa del problema.
-* Contar con el apoyo de tus compañeras, debes trabajar en equipo buscando
-  _feedback_ constante.
-* Definir como crear la estructura de tu propia data y de qué forma mostrarla en
-  el producto.
+# Proceso para definición del producto y usuario
+## La red social
+Una red social es un sitio que tiene la finalidad de servir de herramienta de comunicación entre diversos usuarios que se unen en un espacio para compartir información de distintas formas, como texto e imágenes y tienen diálogos sobre algún interés común.
 
-## Consideraciones generales
+Para decir que es una red social debe contar con las siguientes características:
 
-Este proyecto se debe "resolver" en tríos.
+* Ser una red de contactos
+* Tener un perfil
+* Permitir interactuar entre los usuarios
+* Interactuar por medio de contenidos (creando ó compartiendo)
 
-La lógica del proyecto debe estar implementada completamente en JavaScript (ES6),
-HTML y CSS :smiley:. Para este proyecto no está permitido utilizar
-frameworks de JS.
+## Encontrando al usuario de la red social
+Se realizó una encuesta a 58 posibles usuarios con la cual se obtuvo información y feedback sobre la idea principal de la red social basada en compartir la Historia de México.
 
-Para comenzar tendrás que hacer un _fork_ y _clonar_ este
-repositorio.
+![RangoEdad](https://i.ibb.co/N6qJ4Qv/encuesta-edad.png)
+![GustoHistoria](https://i.ibb.co/BtVVNt0/encuesta-gusto.png)
 
-## Parte obligatoria
+Se preguntó en la encuesta si les interesaría entrar a una red social sobre historia de México. Estos fueron los resultados:
 
-### General
+![InteresRedSocial](https://i.ibb.co/KzjF0BN/encuesta-gustored.png)
+![Porque](https://i.ibb.co/b6stqG8/encuesta-porque.png)
 
-En este proyecto, tú junto a tus compañeras de equipo deberán definir los
-_tests_ que consideren necesarios; puedes guiarte de los proyectos
-anteriores. Igualmente el proyecto cuenta con una estructura de carpetas
-y archivos ya definida pero pueden modificarla de acuerdo a como desean
-trabajar la estructura de su proyecto :smiley:.
+En un principio, la red social fue pensada para compartir datos, documentos, sitios por visitar sobre la historia de México. En la encuesta lo más comentado fue que la historia era aburrida y por otro lado, lo más votado para compartir fueron los lugares históricos.
 
-### Definición del producto
+![InformacionRedSocial](https://i.ibb.co/85jn4XK/encuesta-informacionredsocial.png)
 
-En el `README.md` colocar cómo conociste el mercado de las redes sociales, cómo
-descubriste las necesidades de los usuarios, cómo llegaste  la definición final
-de tu producto. Si tienes fotos de entrevistas, cuestionarios y/o sketches
-(bocetos) compártelos. Es importante que detalles:
+Estos dos últimos resultados ayudaron a que Poua fuera una red social donde la principal actividad sea compartir los sitios históricos que hayan visitado y donde puedan filtrar por etapas de la historia de México.
 
-* Cuáles son los elementos básicos que tiene una red social
-* Quiénes son los principales usuarios de producto
-* Cómo descubriste las necesidades de los usuarios
-* Qué problema resuelve el producto para estos usuarios
-* Cuáles son los objetivos de estos usuarios en relación con el producto
-* Cuáles son las principales funcionalidades del producto y cuál es su prioridad
-* Cómo verificaste que el producto les está resolviendo sus problemas
-* Cómo te asegurarás que estos usuarios usen este producto
+![EtapaHistoricas](https://i.ibb.co/fnL642Y/encuesta-etapashistoricas.png)
 
-Para poder llegar a estas definiciones te recomendamos ver: entrevistas con
-usuarios y tests de usabilidad.
+Los usuarios están interesados en compartir este tipo de contenido que tiene que ver principalmente sobre lugares, leyendas y datos curiosos.
+![Tipodecontenido](https://i.ibb.co/7tqsH6S/encuesta-tipodecontenido.png)
+
+Así se pudo observar que el reto más grande de Poua era el de proporcionar al usuario un diferenciador que lo motivara a ser parte de la red social.
+
+![Comentarios](https://i.ibb.co/S6fPcSJ/encuesta-comentarios.png)
+
+
+### Necesidades del usuario
+
+El usuario necesita una red social donde comparta fotos de lugares históricos y pueda preguntar dudas sobre estos lugares o preguntar a otros usuarios que residen en el lugar para que platiquen su versión de la historia con el fin de conocer la historia de una forma más amena e incluso motivarse a visitar dicho lugar.
+
 
 ### Historias de usuario
 
-Una vez que entiendas las necesidades de tu usuario, escribe las Historias de
-Usuario que representen todo lo que el usuario necesita hacer/ver. Asegúrate
-de incluir una definición de terminado (definition o done) para cada una.
-
-### Diseño de la Interfaz de Usuario (prototipo de baja fidelidad)
-
-Debes definir cuál será el flujo que seguirá el usuario dentro de tu producto y
-con eso deberás diseñar la Interfaz de Usuario (UI por sus siglas en inglés) de
-esta red social que siga este flujo.
-Este diseño debe representar la solución que se implementará finalmente en
-código.
-
-### Responsive
-
-Debe verse bien en dispositivos de pantallas grandes
-(computadoras/es, laptops, etc.) y pequeñas (tablets, celulares, etc.). Te
-sugerimos seguir la técnica de `mobile first` (más detalles sobre esta técnica
-al final).
-
-### Pruebas unitarias (unit tests)
-
-Los tests unitarios deben cubrir un mínimo del 70% de _statements_, _functions_,
-_lines_, y _branches_.
-
-### Implementación de la Interfaz de Usuario (UI y comportamiento de Interfaz de Usuario)
-
-La idea para este producto es que el producto a desarrollar siga los
-lineamientos propuestos en el diseño de la interfaz de usuario. Asegúrate a lo
-largo de la implementación que los elementos propuestos están siendo
-implementados correctamente.
-
-La interfaz debe permitir lo siguiente:
-
-#### Creación de cuenta de usuario e inicio de sesión
-
-* Login con Firebase:
-  - Para el login y las publicaciones en el muro puedes utilizar [Firebase](https://firebase.google.com/products/database/)
-  - Autenticación con Facebook y/o Google y/o Email.
-* Validaciones:
-  - No pueden haber usuarios repetidos.
-  - La cuenta de usuario debe ser un correo electrónico válido.
-  - Lo que se escriba en el campo (_input_) de contraseña debe ser secreto.
-* Comportamiento:
-  - Al enviarse un formulario de registro o inicio de sesión, debe validarse.
-  - En caso haya errores, el sistema debe mostrar mensajes de error para
-    ayudar al usuario a corregirlos.
-  - La aplicación solo permitirá el acceso a usuarios con cuentas válidas.
-  - Al recargar la aplicación, se debe verificar si el usuario está
-    logueado antes de mostrarle el contenido privado.
-* Perspectiva de interfaz:
-
-  ![Login](https://user-images.githubusercontent.com/9284690/40994765-c3cf9602-68c2-11e8-89ac-8254859b5ebb.png)
-
-#### Muro/timeline de la red social
-
-* Validaciones:
-  - Al apretar el botón de publicar, debe validar que exista contenido en el input.
-* Comportamiento:
-  - Poder publicar un post.
-  - Poder poner like a una publicación.
-  - Llevar un conteo de los likes.
-  - Poder eliminar un post específico.
-  - Poder filtrar los posts sólo para mis amigos y para todo público.
-  - Pedir confirmación antes de eliminar un post.
-  - Al darle click en el botón editar, debe cambiar el texto por un input que
-    permita editar el texto y cambiar el link por guardar.
-  - Al darle guardar debe cambiar de vuelta a un texto normal pero con la
-    información editada.
-  - Al recargar la página debo de poder ver los textos editados
-* Perspectiva de interfaz:
-
-  ![Muro](https://user-images.githubusercontent.com/9284690/40994768-c52c3442-68c2-11e8-99a5-9e127e700dee.png)
-
-#### Otras consideraciones
-
-* La aplicación no debe dejar hacer publicaciones vacías de ningun tipo.
-* El usuario debe poder agregar, editar y eliminar contenido de la red
-  social.
-* El usuario debe poder definir la privacidad de lo que pública.
-* Al editar contenido, el contenido editado se verá automáticamente,
-  inmediatamente después de guardar.
-* Al recargar la página se deben poder ver los contenidos editados.
-
-Personaliza estas guías con los colores y/o tipografías que creas convenientes.
-
-### Hacker edition
-
-* Crear posts con imágenes.
-* Permite ver una parte de la aplicación así el usuario no tenga conexión a Internet usando [LocalStorage](https://developer.mozilla.org/es/docs/Web/API/Window/localStorage)
-* Permite agregar amigos.
-* Permite eliminar amigos.
-* Permite compartir publicación (en twitter esto es retwittear, en facebook
-  es compartir).
-* Permite comentar o responder una publicación.
-* Permite editar perfil.
-* Permite ver perfil o resumen desde el _muro_ o lista de publicaciones.
-
-### Consideraciones técnicas
-
-El corazón de este proyecto incluye:
-
-* Separar la manipulación del DOM de la lógica (Separación de responsabilidades).
-* Contar con multiples vistas para esto tu aplicacion debera ser una
- [Single Page Application (SPA)](https://es.wikipedia.org/wiki/Single-page_application)
-* Que el sitio sea responsive, ya dicho.
-* Alterar y persistir datos. Los datos que agregues o modifiques deberán
-  persistir a lo largo de la aplicación, te recomendamos que uses
-  [Firebase](https://firebase.google.com/).
-
-Además, podrías agregar algunas tareas nuevas de acuerdo a tus decisiones:
-
-* Recuerda que no hay un setup de **tests** definido, dependerá de
-  la estructura de tu proyecto también, pero algo que no debes de olvidar es
-  pensar en éstas pruebas, incluso te podrían ayudar a definir la estructura y
-  nomenclatura de tu lógica.
-
-### Consideraciones UX
-
-Desde el punto de vista de UX, deberás:
-
-* Hacer al menos 2 o 3 entrevistas con usuarios.
-* Hacer un  prototipo de baja fidelidad.
-* Hacer sesiones de testing con el producto en HTML.
-
-### Habilidades Blandas
-
-Trabajar en equipo es un gran desafío porque coordinarse no es una tarea fácil,
-y es más difícil entre tres que entre dos. Trata que tu equipo te entienda,
-facilitando siempre el diálogo en dentro del squad.
-
-Planifica enumerando las tareas y distribuyéndolas, considerando los
-recursos, las habilidades, y el tiempo del que dispones. Planifica de manera
-que te permita avanzar en los distintos aspectos del proyecto de forma paralela,
-teniendo un tablero donde puedas ver en qué está trabajando cada compañera.
-
-Entrega tu trabajo a tu equipo a tiempo y colabora con el objetivo
-final del proyecto, lo que puede implicar ayudar a los demás miembros del equipo
-con sus pendientes, con el fin de entregar una red social de calidad.
-
-**La división del trabajo debe permitir que todo el equipo
-practique el aprendizaje de todas las habilidades esperadas. No se dividan el
-trabajo como en una fábrica**
-
-Para conocer a los usuario para eso debes salir e investigar. Tienes que
-ejercitar tus habilidades de comunicación y toma de decisiones.
-Existen infinitas opciones, depende de ti el camino que escoges.
-Para que tu red social responda a las necesidades de sus usuarios, probablemente
-deberás adquirir nuevos conocimientos para implementar sus preferencias.
-
-Esta vez, haz _code review_(feedback de tu código) con **otro squad**, para
-que puedas mejorar el producto. Mientras más feedback reciban, mejor.
-
-Esperamos que valores y escuches los comentarios y críticas de los demás,
-rescatando aquellos aspectos que sirven para tu crecimiento. Entrega siempre
-tu opinión de manera constructiva, fundamentada y coherente, con el propósito
-de ayudar a tus compañeras. Estos comentarios los debes hacer de manera honesta,
-empática e inmediata.
-
-Finalmente, deberás presentar el proyecto que creaste, al usuario que escogiste
-y las necesidades que lograste resolver en este proceso. Como siempre, sabemos
-que presentar puede ser una tarea difícil, esperamos que tengas capacidad de
-síntesis y articules tus ideas con claridad para que logres mostrar tu trabajo
-y que los demás lo comprendan.
-
-## Entrega
-
-El proyecto será _entregado_ subiendo tu código a GitHub (`commit`/`push`) y la
-interfaz será desplegada usando GitHub pages u otro servicio de hosting que
-puedas haber encontrado en el camino.
-
-## Evaluación
-
-### Tech
-
-| Habilidad |  |
-|-----------|----------------|
-| **JavaScript** | |
-| Estilo |
-| Nomenclatura/semántica |
-| Funciones/modularidad |
-| Estructuras de datos |
-| Tests |
-| **HTML** | |
-| Validación |
-| Estilo |
-| Semántica |
-| SEO | N/A
-| **CSS** | |
-| DRY |
-| Responsive |
-| **SCM** | |
-| Git |
-| GitHub |
-| **CS** |
-| Lógica |
-| Arquitectura |
-
-### UX
-
-| Habilidad | |
-|-----------|----------------|
-| User Centricity |
-| Visual Desing |
-
-### Habilidades Blandas
-
-Para este proyecto esperamos que ya hayas alcanzado el nivel 3 en todas tus
-habilidades blandas. Te aconsejamos revisar la rúbrica:
-
-| Habilidad | |
-|-----------|----------------|
-| Planificación y organización |
-| Autoaprendizaje |
-| Solución de Problemas |
-| Dar y recibir feedback |
-| Adaptabilidad |
-| Trabajo en equipo (trabajo colaborativo y responsabilidad) |
-| Comunicación eficaz |
-| Presentaciones |
-
-***
-
-## Pistas / Tips / Lecturas complementarias
-
-### Mobile first
-
-El concepto de [_mobile first_](https://www.mediaclick.es/blog/diseno-web-responsive-design-y-la-importancia-del-mobile-first/)
-hace referencia a un proceso de diseño y desarrollo donde partimos de cómo se ve
-y cómo funciona la aplicación en un dispositivo móvil primero, y más adelante se
-ve como adaptar la aplicación a pantallas progresivamente grandes y
-características específicas del entorno desktop. Esto es en contraposición al
-modelo tradicional, donde primero se diseñaban los websites (o webapps) para
-desktop y después se trataba de _arrugar_ el diseño para que entre en pantallas
-más chicas. La clave acá es asegurarse de que desde el principio diseñan usando
-la vista _responsive_ de las herramientas de desarrollador (developer tools) del
-navegador. De esa forma, partimos de cómo se ve y comporta la aplicación en una
-pantalla y entorno móvil.
-
-### Múltiples vistas y Single-page Applications (SPAs)
-
-En proyectos anteriores nuestras aplicaciones habían estado compuestas de una
-sola _vista_ principal (una sóla _página_). En este proyecto se introduce la
-necesidad de tener que dividir nuestra interfaz en varias _vistas_ o _páginas_
-y ofrecer una manera de navegar entre estas vistas. Este problema se puede
-afrontar de muchas maneras: con archivos HTML independientes (cada uno con su
-URL) y links tradicionales, manteniendo estado en memoria y rederizando
-condicionalmente (sin refrescar la página), [manipulando el historial del
-navegador](https://developer.mozilla.org/es/docs/DOM/Manipulando_el_historial_del_navegador)
-con [`window.history`](https://developer.mozilla.org/es/docs/Web/API/Window/history),
-o usando algun Library de Routing del cual puedes preguntarle a tus coachxs.
-En este proyecto te invitamos a explorar opciones y decidir una opción
-de implementación.
-
-### Escritura de datos
-
-En los proyectos anteriores hemos consumido (leído) datos, pero todavía no
-habíamos escrito datos (salvar cambios, crear datos, borrar, ...). En este
-proyecto tendrás que crear (salvar) nuevos datos, así como leer, actualizar y
-modificar datos existentes. Estos datos se podrán guardar de forma remota
-usando [Firebase](https://firebase.google.com/).
-
-Otras:
-
-* [Modulos: Export](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/export)
-* [Modulos: Import](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/import)
-* [Diseño web, responsive design y la importancia del mobile first - Media Click](https://www.mediaclick.es/blog/diseno-web-responsive-design-y-la-importancia-del-mobile-first/)
-* [Mobile First: el enfoque actual del diseño web móvil - 1and1](https://www.1and1.es/digitalguide/paginas-web/diseno-web/mobile-first-la-nueva-tendencia-del-diseno-web/)
-* [Mobile First - desarrolloweb.com](https://desarrolloweb.com/articulos/mobile-first-responsive.html)
-* [Mobile First - ZURB](https://zurb.com/word/mobile-first)
-* [Mobile First Is NOT Mobile Only - Nielsen Norman Group](https://www.nngroup.com/articles/mobile-first-not-mobile-only/)
-
-***
-
-## Checklist (no olvides llenarla)
-
-### General
-
-* [ ] Producto final sigue los lineamientos del diseño.
-
-### `README.md`
-
-* [ ] Definición del producto
-* [ ] Resumen de entrevistas con usuarios.
-* [ ] Link/screenshots prototipo de baja fidelidad.
-* [ ] Conclusiones de pruebas con el producto en HTML.
-
-### Pruebas / tests
-
-* [ ] Pruebas unitarios cubren un mínimo del 70% de statements, functions,
-  lines, y branches.
-* [ ] Pasa tests (y linters) (`npm test`).
-
-### Creación de cuenta (sign up)
-
-* [ ] Permite crear cuenta.
-* [ ] Valida email.
-* [ ] Valida password.
-* [ ] Muestra mensajes de error.
-
-### Inicio de sesión (sign in)
-
-* [ ] Permite iniciar sesión.
-* [ ] Valida email.
-* [ ] Valida password.
-* [ ] Muestra mensajes de error.
-
-### Muro (wall/feed)
-
-* [ ] Muestra _muro_, o lista de publicaciones.
-* [ ] Permite hacer nuevas publicaciones.
-* [ ] Permite eliminar publicaciones.
-* [ ] Pide confirmación antes de borrar publicación.
-* [ ] Permite editar publicación en el mismo lugar (in place).
-* [ ] Permite filtrar publicaciones por público/privado.
-* [ ] Permite marcar publicaciones como _gustados_ (like, corazón, estrella,
-  etc...).
-* [ ] Permite ver cuántas marcas, likes, estrellas, corazones o lo que se haya
-  elegido, ha recibido una publicación.
-
-### Hacker Edition
-
-* [ ] Permite agregar amigos.
-* [ ] Permite eliminar amigos.
-* [ ] Permite compartir publicación (en twitter esto es retwittear, en facebook
-  es compartir).
-* [ ] Permite comentar o responder una publicación.
-* [ ] Permite editar perfil.
-* [ ] Permite ver perfil o resumen desde el _muro_ o lista de publicaciones.
-* [ ] Permite ver cuántas marcas, likes, estrellas, corazones o lo que se haya
-  elegido, ha recibido una publicación.
+PRIMERA HISTORIA DE USUARIO
+
+El usuario necesita registrarse en una página que muestre un formulario para poner su correo y contraseña en inputs, así como un botón para guardar sus datos.
+
+    Definición de Terminado
+
+    - Existe un input para que el usuario ingrese con Facebook y/o Google y/o Email que tendrá que ser validado para no repetirse.
+
+    - Existe un input para que el usuario ingrese una contraseña que no debe ser visible.
+
+    - Existe un botón que guarda los datos del usuario y regresa al usuario a pantalla de inicio.
+
+SEGUNDA HISTORIA DE USUARIO  
+
+El usuario necesita una pantalla para poder ingresar a la red social poniendo su usuario y contraseña en inputs validando la coincidencia con los que registró, e ingresar a través de un botón.
+
+    Definición de Terminado
+
+    - Existe un input para que el usuario ingrese un correo válido.
+
+    - Existe un input para que el usuario ingrese su contraseña no visible previamente definida.
+
+    - Aparece un popup box si el usuario ingresa datos incorrectos.
+
+    - Existe un botón para iniciar sesión una vez ingresados los datos correctos y dirige a la pantalla de publicaciones.
+
+    - Existe un botón o link para ir a registrarse.
+
+TERCERA HISTORIA DE USUARIO  
+
+El usuario necesita visualizar un muro o lista de publicaciones una vez que inició sesión.
+
+    Definición de Terminado
+
+    - Existe una pantalla que muestra sección sobre legalidad para homeschoolers.
+
+    - Existe un sidebar para mostrar secciones a las que puede ingresar el usuario; ir a su perfil, publicaciones, legalidad, recursos educativos, organización en casa, eventos, publicaciones guardadas.
+
+    - En la publicaciones existentes se visualizan botón para guardar publicación.
+
+CUARTA HISTORIA DE USUARIO  
+
+El usuario necesita tener un input para publicar, editar y eliminar publicaciones en el muro a través de botones que indiquen cada acción. Además el usuario necesita un botón para definir si sus publicaciones son públicas o privadas
+
+    Definición de Terminado
+
+    - Existe un text area para publicar dentro del muro con botones que le permitan publicar.
+
+    - Existe un select para  que el usuario pueda definir si su publicación es pública o privada.
+
+    - Existe un botón para salir de la publicación por si se arrepiente.
+
+
+QUINTA HISTORIA DE USUARIO
+
+El usuario necesita iconos o botones para darle like a una publicación, así como visualizar el conteo de likes.
+
+    Definición de Terminado
+
+    - Existe un icono de like que lleva un conteo, lo muestra y cambia de color.
+
+    - El icono al ser presionado nuevamente puede revertir la acción de contador restando el like.
+
+SEXTA HISTORIA DE USUARIO
+
+El usuario necesita acceder a su perfil y un botón para poder cerrar sesión y salir de la aplicación
+
+    Definición de Terminado
+
+    - Existe un menú donde el usuario pueda cambiar de sección o topics.
+
+    - Existe dentro del menú un botón para cerrar sesión.
+
+
+# El Proceso para el diseño de la Interfaz de la red social
+
+Para la realización del proyecto se realizaron prototipos en baja fidelidad y posteriormente se iteró en los prototipos de alta fidelidad.
+
+Los prototipos de baja fidelidad nos permitieron plasmar la primera idea del funcionamiento de la red social para poder ser iterados y de esta manera presentar el flujo que debìa ser considerado para el diseño de Poua, pero sobre todo para conoces las historias de usuario.
+
+![Pantallas de inicio](https://i.ibb.co/cg4pTqb/IMG-20190326-123928228-2.jpg)
+![Secciones dentro de Poua](https://i.ibb.co/HVbd34P/IMG-20190326-123959572-2.jpg)
+
+* Primer Test:
+
+    - El nombre de la red social era "Pouilia", que era difícil pronunciar. Por lo que se decidió cambiar el nombre a "Poua".
+    -No se comprendía el origen náhuatl del nombre "Pouilia".
+    - A primera vista no se entendía el sentido de la red social, a pesar de que estaba una leyenda bajo el nombre de la red social. Por lo que se agrandó la leyenda.
+    - Algunos iconos y botones no eran claros para indicar al usuario las acciones que podía realizar con ellos (Guardar publicación, regresar al muro, visualizar publicaciones por Estado o época de la Historia).
+
+* Segundo Test:
+
+    - Se definen los colores para la red social (Rosa, amarillo, azul marino, azul cielo y verde) por ser atractivos para los usuarios.
+    - La mayoría de las personas preguntaron el significado de Poua, por lo que se decidió ponerlo explícitamente en el inicio.
+    - Se definieron estilos distintos para diseño responsivo en dispositivos móviles y pantalla de escritorio al ser más atractivos y legibles para el usuario en la pantalla de inicio.
+    - Se detectaron issues en la presentación de los elementos en la interfaz para crear publicaciones.
+
+> **Nota:** Los prototipos de alta fidelidad pueden ser observados en la aplicación de figma.
+
+[Ir a prototipos de alta fidelidad](https://www.figma.com/file/TVLgByJxKDzxrvjnqrsBgoh3/prototipo-red-social)
+
+
+# Uso e instalación
+Para el uso de la red social no se requiere ningún tipo de instalación, el procedimiento consta únicamente de dirigirse a la siguiente dirección dentro de un navegador:
+
+[Poua](https://www.figma.com/file/TVLgByJxKDzxrvjnqrsBgoh3/prototipo-red-social)
+
+## Especificaciones V.1.0
+Se requiere registro del usuario a través de un correo y contraseña o con cuenta de google, una vez hecho el registro se direcciona al usuario a la primera pantalla de muro en donde puede visualizar publicaciones, crear, eliminar y editar las propias.
