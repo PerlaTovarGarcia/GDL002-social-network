@@ -3,7 +3,7 @@ Poua es una red social creada para contar la historia de México compartiendo co
 
 # Definición del producto
 ## El objetivo // Problemática que resuelve
-A pesar del gran interés de algunas personas por la historia, algunos consideran que ésta se cuenta de una forma aburrida y poco interesante. De esta manera, Poua es una red social en donde se toma al usuario como participe de la historia porque existe la posibilidad de que el usuario pudiése ser descendiente de un personaje histórico, por ejemplo, que viva en donde se gestó alguna de las grandes batallas, ó de que trabaje en la esquina donde se firmó un tratado importante para construir el México que somos hoy. Así, el objetivo de Poua es convertirse en un espacio y punto de encuentro para aquellas personas que consideran que la Historia es parte de cada uno de los que vivimos México.
+A pesar del gran interés de algunas personas por la historia, algunos consideran que ésta se cuenta de una forma aburrida y poco interesante. De esta manera, Poua es una red social en donde se toma al usuario como partícipe de la historia porque existe la posibilidad de que el usuario pudiese ser descendiente de un personaje histórico, por ejemplo, que viva en donde se gestó alguna de las grandes batallas, ó de que trabaje en la esquina donde se firmó un tratado importante para construir el México que somos hoy. Así, el objetivo de Poua es convertirse en un espacio y punto de encuentro para aquellas personas que consideran que la Historia es parte de cada uno de los que vivimos México.
 
 
 ## El usuario
@@ -98,8 +98,6 @@ El usuario necesita visualizar un muro o lista de publicaciones una vez que inic
 
     Definición de Terminado
 
-    - Existe una pantalla que muestra sección sobre legalidad para homeschoolers.
-
     - Existe un sidebar para mostrar secciones a las que puede ingresar el usuario; ir a su perfil, publicaciones, legalidad, recursos educativos, organización en casa, eventos, publicaciones guardadas.
 
     - En la publicaciones existentes se visualizan botón para guardar publicación.
@@ -142,7 +140,7 @@ El usuario necesita acceder a su perfil y un botón para poder cerrar sesión y 
 
 Para la realización del proyecto se realizaron prototipos en baja fidelidad y posteriormente se iteró en los prototipos de alta fidelidad.
 
-Los prototipos de baja fidelidad nos permitieron plasmar la primera idea del funcionamiento de la red social para poder ser iterados y de esta manera presentar el flujo que debìa ser considerado para el diseño de Poua, pero sobre todo para conoces las historias de usuario.
+Los prototipos de baja fidelidad nos permitieron plasmar la primera idea del funcionamiento de la red social para poder ser iterados y de esta manera presentar el flujo que debía ser considerado para el diseño de Poua, pero sobre todo para conocer las historias de usuario.
 
 ![Pantallas de inicio](https://i.ibb.co/cg4pTqb/IMG-20190326-123928228-2.jpg)
 ![Secciones dentro de Poua](https://i.ibb.co/HVbd34P/IMG-20190326-123959572-2.jpg)

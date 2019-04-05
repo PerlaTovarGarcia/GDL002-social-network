@@ -8,8 +8,8 @@ export let basePost=()=>{
 	let comment = document.querySelector(".createPost").value;
   let time = new Date();
 
-  let buttnsDelete=Array.from(document.getElementsByClassName('eliminar'));
-  buttnsDelete.forEach(button => button.addEventListener('click', dlete));
+  //let buttnsDelete=Array.from(document.getElementsByClassName('eliminar'));
+  //buttnsDelete.forEach(button => button.addEventListener('click', dlete));
 
 	db.collection("users").add({ //agrega un ID automatico a cada usuario
     comment: comment,
@@ -77,7 +77,7 @@ export const newpost = () => {
             </article>
           `;
 
-          //db.collection("users").orderBy('date', 'desc');
+          db.collection("users").orderBy('date', 'desc');
           //let orderPost = () => {
 
           //}
