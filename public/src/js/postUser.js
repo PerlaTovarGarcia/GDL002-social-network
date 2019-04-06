@@ -27,30 +27,17 @@ export let basePost=()=>{
 //Inicializa funcion para mostrar post
 export const newpost = () => {
 
-//Eliminar post
-	/*let buttnsDelete = Array.from(document.getElementsByClassName('eliminar'));
-	buttnsDelete.forEach(button => button.addEventListener('click', basePost.dlete));
-
-	function dlete () {
-		let idParentDleteBtn = this.event.target.parentNode.getAttribute('id');
-		db.collection("users").doc(idParentDleteBtn).delete().then(function() {
-		console.log(idParentDleteBtn);
-		//let ids = document.querySelector(id);
-		//ids.innerHTML = '';
-			}).catch(function(error) {
-				console.error("Error removing document: ", error);
-			});
-		}*/
-		const dlete = (id)=>{
-
-			db.collection("users").doc(id).delete().then(function() {
+		/*const dlete = (id)=>{
+			db.collection('users')
+			.doc(id)
+			.delete()
+			.then(function() {
 				console.log("Document successfully deleted!");
 
 				}).catch(function(error) {
 					console.error("Error removing document: ", error);
 				});
-			};
-
+			};*/
 
 //Visualizar template de posts
   if (wall()){
@@ -84,17 +71,40 @@ export const newpost = () => {
           `;
 
           db.collection("users").orderBy('date', 'desc');
+
+
+
+
+						let deleteButtons = document.querySelectorAll('.eliminar');
+							for (var i = 0; i < deleteButtons.length; i++) {
+			      		deleteButtons[i].addEventListener('click', function (event) {
+			        		dlete(event.target.id);
+			        				console.log(event.target.id);
+			    			});
+			    }
 					//document.querySelector('.eliminar').addEventListener('click', dlete,false);
 					//let orderPost = () => {
 
           //}
 
-          console.log(document.querySelector('.eliminar'));
-          document.querySelector('.eliminar').addEventListener('click', () => {dlete(doc.id);
-					});
+          //console.log(document.querySelector('.eliminar'));
+          /*document.querySelector('.eliminar').addEventListener('click', () => {dlete(doc.id);
+					});*/
 					//dlete(doc.id));
           });
 
         });
   }
 };
+
+export function dlete(id) {
+db.collection('post')
+	.doc(id)
+	.delete()
+	.then(function () {
+		console.log('Document successfully deleted!');
+	})
+	.catch(function (error) {
+		console.error('Error removing document: ', error);
+	});
+}
