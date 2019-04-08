@@ -2,7 +2,7 @@ import { initRouter } from './changePage.js';
 
   const inicializa = () => {
 
-    const config = {
+  /*  const config = {
         apiKey: "AIzaSyDLsQLjAYWtZaPcvhuC1MBnWeYf7k3WMcU",
         authDomain: "redsociallaboratortia.firebaseapp.com",
         databaseURL: "https://redsociallaboratortia.firebaseio.com",
@@ -10,7 +10,7 @@ import { initRouter } from './changePage.js';
         storageBucket: "redsociallaboratortia.appspot.com",
         messagingSenderId: "97649702787"
       };
-      firebase.initializeApp(config);
+      firebase.initializeApp(config);*/
 
 initRouter();
  };
